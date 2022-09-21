@@ -3,11 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Red Social de Imagenes</title>
+        <title>Social Pogona</title>
 
         <script>
-            const datos = '<form> <div class="form-group"> <label>Usuario</label> <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Usuario"> </div> <br> <div class="form-group"> <label>Contraseña</label> <input type="password" class="form-control" placeholder="Contraseña"> </div> <br> <div class="text-center"> <button class="btn btn-primary">Iniciar sesión</button> </div> </form>';
-            const datosDos = '<form> <div class="form-group"> <label>Email</label> <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="ejemplo@email.com"> </div> <br> <div class="form-group"> <label>Usuario</label> <input type="password" class="form-control" placeholder="Usuario"> </div> <br> <div class="form-group"> <label>Contraseña</label> <input type="password" class="form-control" placeholder="Contraseña"> </div> <br> <div class="text-center"> <button class="btn btn-primary">Crear Cuenta</button> </div> </form>';
+            const datos = '<form action="src/muro.html"> <div class="form-group"> <label>Usuario</label> <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Usuario"> </div> <br> <div class="form-group"> <label>Contraseña</label> <input type="password" class="form-control" placeholder="Contraseña"> </div> <br> <div class="text-center"> <button class="btn btn-primary">Iniciar sesión</button> </div> </form>';
+            const datosDos = '<form action="index.html"> <div class="form-group"> <label>Email</label> <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="ejemplo@email.com"> </div> <br> <div class="form-group"> <label>Usuario</label> <input type="password" class="form-control" placeholder="Usuario"> </div> <br> <div class="form-group"> <label>Contraseña</label> <input type="password" class="form-control" placeholder="Contraseña"> </div> <br> <div class="text-center"> <button class="btn btn-primary">Crear Cuenta</button> </div> </form>';
         </script>
 
         <!-- Favicon -->
@@ -33,27 +33,27 @@
                         </div>
                         <hr>
 
-
                         <div id="formulario"></div>
-
-                        <script>
-                            const funcion = ( value ) => {
-                                if ( value === 'iniciar' ){
-                                    document.getElementById("formulario").innerHTML = datos;
-                                } else if ( value === 'registrar' ) {
-                                    document.getElementById("formulario").innerHTML = datosDos;
-                                }
-                            }
-                            document.getElementById("formulario").innerHTML = datos;
-                        </script>
 
                     </div>
                 </div>
             </div>
         </div>
-
-
+        
         <!-- Js -->
+        <script>
+            const funcion = ( value ) => {
+                if ( value === 'iniciar' ){
+                    document.getElementById("formulario").innerHTML = datos;
+                } else if ( value === 'registrar' ) {
+                    document.getElementById("formulario").innerHTML = datosDos;
+                } 
+            }
+        </script>
+        
+        <script>
+            document.getElementById("formulario").innerHTML = datos;
+        </script>
 
         <!-- Bootstrap Js -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
